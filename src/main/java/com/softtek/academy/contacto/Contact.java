@@ -1,6 +1,6 @@
 package com.softtek.academy.contacto;
 
-public class Contacto {
+public class Contact {
 	private String id;
     private String firstName;
     private String lastName;
@@ -50,10 +50,10 @@ public class Contacto {
 	public void setContactType(ContactType contactType) {
 		this.contactType = contactType;
 	}
-	public Contacto() {
+	public Contact() {
 		this.contactType = ContactType.UNKNOWN;
     }
-    public Contacto(String id, String firstName, String lastName, String motherName, String email, String phoneNumber,
+    public Contact(String id, String firstName, String lastName, String motherName, String email, String phoneNumber,
 			ContactType contactType) {
 		this.id = id;
 		this.firstName = firstName;
@@ -68,6 +68,7 @@ public class Contacto {
         StringBuilder sb = new StringBuilder();
         sb.append("nombre: "+this.getFirstName()+"\n");
         sb.append("Telefono: "+this.getPhoneNumber()+"\n");
+        sb.append("Tipo: " + this.getContactType());
         return sb.toString();
     }
 }
